@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="skyRays" cx="50%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#fff8db" />
+      <stop offset="45%" stop-color="#fde047" />
+      <stop offset="80%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </radialGradient>
+    
+    <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d4ed8" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+
+    <linearGradient id="shieldGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#15803d" />
+      <stop offset="60%" stop-color="#166534" />
+      <stop offset="100%" stop-color="#14532d" />
+    </linearGradient>
+
+    <linearGradient id="goldBanner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="60%" stop-color="#fef9c3" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#a16207" />
+    </linearGradient>
+
+    <linearGradient id="crossGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="35%" stop-color="#fbbf24" />
+      <stop offset="70%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#92400e" />
+    </linearGradient>
+
+    <linearGradient id="hartebeestCoat" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309" />
+      <stop offset="50%" stop-color="#92400e" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+
+    <linearGradient id="cornYellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#facc15" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <g filter="url(#dropShadow)">
+    <!-- BACKDROP RIBBON EXTENSIONS (Green Ribbons) -->
+    <path d="M 60 365 L 140 330 L 140 410 L 60 440 L 90 400 Z" fill="#14532d" stroke="#eab308" stroke-width="3" stroke-linejoin="round" />
+    <path d="M 540 365 L 460 330 L 460 410 L 540 440 L 510 400 Z" fill="#14532d" stroke="#eab308" stroke-width="3" stroke-linejoin="round" />
+
+    <!-- TOP ARCH CREST (Sky & Sun Rays) -->
+    <path d="M 120 180 Q 300 70 480 180 L 480 320 L 120 320 Z" fill="url(#skyRays)" stroke="#166534" stroke-width="10" stroke-linejoin="round" />
+
+    <!-- Sun Ray Accents -->
+    <g stroke="#f59e0b" stroke-width="4" opacity="0.4" stroke-linecap="round">
+      <line x1="300" y1="280" x2="200" y2="120" />
+      <line x1="300" y1="280" x2="240" y2="100" />
+      <line x1="300" y1="280" x2="300" y2="90" />
+      <line x1="300" y1="280" x2="360" y2="100" />
+      <line x1="300" y1="280" x2="400" y2="120" />
+      <line x1="300" y1="280" x2="160" y2="150" />
+      <line x1="300" y1="280" x2="440" y2="150" />
+    </g>
+
+    <!-- Flowing River / Field Water -->
+    <path d="M 120 285 Q 210 265 300 285 T 480 270 L 480 320 L 120 320 Z" fill="url(#riverGrad)" />
+    <path d="M 120 295 Q 210 280 300 295 T 480 285" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.8" />
+
+    <!-- Left: Bull / Cattle -->
+    <g transform="translate(130, 175) scale(0.95)">
+      <!-- Bull Body -->
+      <path d="M 50 45 Q 80 40 100 48 Q 115 55 110 85 L 105 110 L 95 110 L 90 90 L 60 90 L 55 110 L 45 110 L 40 80 Q 20 75 25 55 Z" fill="#78350f" stroke="#451a03" stroke-width="2" />
+      <!-- Bull White Face/Chest Markings -->
+      <path d="M 100 48 Q 115 45 120 60 Q 118 75 105 75 Q 98 70 100 48 Z" fill="#f8fafc" stroke="#451a03" stroke-width="1.5" />
+      <circle cx="108" cy="56" r="3" fill="#0f172a" />
+      <path d="M 112 45 Q 115 38 122 42" fill="none" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round" />
+      <!-- Bull Horns -->
+      <path d="M 104 43 Q 102 36 96 38" fill="none" stroke="#e2e8f0" stroke-width="3" stroke-linecap="round" />
+      <!-- Green Pasture Base -->
+      <ellipse cx="65" cy="112" rx="45" ry="8" fill="#16a34a" />
+    </g>
+
+    <!-- Center: Red Hartebeest Head & Horns -->
+    <g transform="translate(245, 95)">
+      <!-- Distinctive Curved Ringed Horns -->
+      <path d="M 40 70 C 35 30 15 20 22 5 C 27 -5 45 10 48 35 C 50 10 68 -5 73 5 C 80 20 60 30 55 70 Z" fill="#451a03" stroke="#eab308" stroke-width="1.5" />
+      <!-- Horn Ridges -->
+      <path d="M 28 20 Q 38 25 45 35" fill="none" stroke="#a16207" stroke-width="2" />
+      <path d="M 26 12 Q 35 15 44 25" fill="none" stroke="#a16207" stroke-width="2" />
+      <path d="M 67 20 Q 57 25 50 35" fill="none" stroke="#a16207" stroke-width="2" />
+      <path d="M 69 12 Q 60 15 51 25" fill="none" stroke="#a16207" stroke-width="2" />
+      <!-- Ears -->
+      <path d="M 25 65 C 5 60 0 75 18 80 Z" fill="#92400e" stroke="#451a03" stroke-width="1.5" />
+      <path d="M 70 65 C 90 60 95 75 77 80 Z" fill="#92400e" stroke="#451a03" stroke-width="1.5" />
+      <!-- Head & Long Hartebeest Muzzle -->
+      <path d="M 30 65 Q 47 60 65 65 L 60 115 Q 47 135 35 115 Z" fill="url(#hartebeestCoat)" stroke="#451a03" stroke-width="2" />
+      <!-- Dark Facial Blaze -->
+      <path d="M 40 65 L 55 65 L 53 110 L 42 110 Z" fill="#291305" />
+      <!-- Eyes -->
+      <ellipse cx="32" cy="74" rx="4" ry="3" fill="#0f172a" />
+      <ellipse cx="63" cy="74" rx="4" ry="3" fill="#0f172a" />
+      <!-- Muzzle / Nostrils -->
+      <ellipse cx="43" cy="120" rx="2" ry="3" fill="#020617" />
+      <ellipse cx="52" cy="120" rx="2" ry="3" fill="#020617" />
+      <!-- Neck & Chest -->
+      <path d="M 32 115 L 20 180 L 75 180 L 63 115 Z" fill="url(#hartebeestCoat)" />
+    </g>
+
+    <!-- Right: Maize / Corn Cob -->
+    <g transform="translate(400, 145) scale(0.95)">
+      <!-- Green Leaves / Husks -->
+      <path d="M 15 130 C -5 85 10 55 25 35 C 20 65 25 105 35 130 Z" fill="#16a34a" stroke="#14532d" stroke-width="2" />
+      <path d="M 45 130 C 65 85 50 55 35 35 C 40 65 35 105 25 130 Z" fill="#15803d" stroke="#14532d" stroke-width="2" />
+      <!-- Corn Kernel Ear -->
+      <path d="M 22 40 C 22 20 38 20 38 40 L 42 105 C 42 120 18 120 18 105 Z" fill="url(#cornYellow)" stroke="#a16207" stroke-width="2" />
+      <!-- Kernel Texture Rows -->
+      <g fill="#ca8a04">
+        <circle cx="26" cy="45" r="2.5" /><circle cx="34" cy="45" r="2.5" />
+        <circle cx="25" cy="55" r="2.5" /><circle cx="35" cy="55" r="2.5" />
+        <circle cx="25" cy="65" r="2.5" /><circle cx="35" cy="65" r="2.5" />
+        <circle cx="25" cy="75" r="2.5" /><circle cx="35" cy="75" r="2.5" />
+        <circle cx="26" cy="85" r="2.5" /><circle cx="34" cy="85" r="2.5" />
+        <circle cx="27" cy="95" r="2.5" /><circle cx="33" cy="95" r="2.5" />
+      </g>
+    </g>
+
+    <!-- BOTTOM GREEN SHIELD (Faith & Security) -->
+    <g>
+      <!-- Green Shield Body with Emerald Rays -->
+      <path d="M 180 340 L 420 340 L 300 535 Z" fill="url(#shieldGreen)" stroke="#eab308" stroke-width="8" stroke-linejoin="round" />
+      
+      <!-- Radiating Green Stripes -->
+      <g stroke="#15803d" stroke-width="8" opacity="0.6">
+        <line x1="300" y1="520" x2="220" y2="350" />
+        <line x1="300" y1="520" x2="260" y2="350" />
+        <line x1="300" y1="520" x2="300" y2="350" />
+        <line x1="300" y1="520" x2="340" y2="350" />
+        <line x1="300" y1="520" x2="380" y2="350" />
+      </g>
+
+      <!-- OPEN HOLY BIBLE -->
+      <g transform="translate(245, 385)">
+        <!-- Bible Backing Cover -->
+        <path d="M 8 75 Q 55 60 55 20 Q 55 60 102 75 L 102 70 Q 55 55 55 15 Q 55 55 8 70 Z" fill="#78350f" />
+        <!-- Left Book Page -->
+        <path d="M 12 70 Q 52 56 52 18 L 52 16 Q 52 54 12 68 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+        <path d="M 12 68 Q 52 54 52 16 L 52 14 Q 52 52 12 66 Z" fill="#ffffff" stroke="#94a3b8" stroke-width="1" />
+        <!-- Right Book Page -->
+        <path d="M 98 70 Q 58 56 58 18 L 58 16 Q 58 54 98 68 Z" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+        <path d="M 98 68 Q 58 54 58 16 L 58 14 Q 58 52 98 66 Z" fill="#ffffff" stroke="#94a3b8" stroke-width="1" />
+        
+        <!-- Text Lines on Pages -->
+        <g stroke="#94a3b8" stroke-width="1.5" stroke-linecap="round" opacity="0.7">
+          <line x1="22" y1="36" x2="44" y2="30" />
+          <line x1="22" y1="46" x2="44" y2="40" />
+          <line x1="22" y1="56" x2="44" y2="50" />
+          <line x1="66" y1="30" x2="88" y2="36" />
+          <line x1="66" y1="40" x2="88" y2="46" />
+          <line x1="66" y1="50" x2="88" y2="56" />
+        </g>
+
+        <!-- STANDING GOLDEN CROSS -->
+        <!-- Vertical Beam -->
+        <path d="M 50 6 L 60 6 L 60 76 L 50 76 Z" fill="url(#crossGold)" stroke="#78350f" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Horizontal Beam -->
+        <path d="M 36 24 L 74 24 L 74 34 L 36 34 Z" fill="url(#crossGold)" stroke="#78350f" stroke-width="1.5" stroke-linejoin="round" />
+        <!-- Cross Center Highlight -->
+        <circle cx="55" cy="29" r="3" fill="#fef08a" />
+      </g>
+    </g>
+
+    <!-- PROMINENT CENTRAL BANNER (HARTBEESFONTEIN LANDBOUVERENIGING) -->
+    <g>
+      <!-- Outer Banner Shadow / Border -->
+      <path d="M 80 320 Q 300 290 520 320 L 530 380 Q 300 350 70 380 Z" fill="#14532d" stroke="#eab308" stroke-width="4" stroke-linejoin="round" />
+      <!-- Inner Banner Surface -->
+      <path d="M 88 326 Q 300 298 512 326 L 522 374 Q 300 344 78 374 Z" fill="url(#goldBanner)" stroke="#ca8a04" stroke-width="2" />
+
+      <!-- Main Heading: HARTBEESFONTEIN -->
+      <text x="300" y="348" 
+            font-family="'Trebuchet MS', 'Arial Black', Impact, sans-serif" 
+            font-size="33" 
+            font-weight="900" 
+            fill="#0f2942" 
+            text-anchor="middle" 
+            letter-spacing="2.5">
+        HARTBEESFONTEIN
+      </text>
+
+      <!-- Subtitle Accent Bars -->
+      <line x1="125" y1="362" x2="160" y2="362" stroke="#ca8a04" stroke-width="3" stroke-linecap="round" />
+      <line x1="440" y1="362" x2="475" y2="362" stroke="#ca8a04" stroke-width="3" stroke-linecap="round" />
+
+      <!-- Subtitle: LANDBOUVERENIGING -->
+      <text x="300" y="367" 
+            font-family="'Trebuchet MS', Arial, sans-serif" 
+            font-size="16" 
+            font-weight="800" 
+            fill="#0f2942" 
+            text-anchor="middle" 
+            letter-spacing="4">
+        LANDBOUVERENIGING
+      </text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "name": "Hartbeesfontein Veiligheid",
+  "description": "Comprehensive tactical community safety and control room platform for Hartbeesfontein featuring live emergency dispatch, dynamic suspect escape radius modeling, real-time responder tracking, AI-powered intelligence summaries, SITREP logging, and tactical operations coordination.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

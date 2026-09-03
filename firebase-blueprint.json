@@ -1,0 +1,230 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User account and responder profile",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string" },
+        "callsign": { "type": "string" },
+        "phoneNumber": { "type": "string" }
+      },
+      "required": ["uid", "name", "role"]
+    },
+    "EmergencyEvent": {
+      "title": "EmergencyEvent",
+      "description": "Emergency SOS or panic trigger",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "callerName": { "type": "string" },
+        "callerPhone": { "type": "string" },
+        "emergencyType": { "type": "string" },
+        "status": { "type": "string" },
+        "startTime": { "type": "string" }
+      },
+      "required": ["id", "emergencyType", "status", "startTime"]
+    },
+    "SituationReport": {
+      "title": "SituationReport",
+      "description": "Voorvalleboek / Data log situation report",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "incidentNumber": { "type": "string" },
+        "type": { "type": "string" },
+        "priority": { "type": "string" },
+        "status": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "type", "priority", "status"]
+    },
+    "Case": {
+      "title": "Case",
+      "description": "Incident investigation docket",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "caseNumber": { "type": "string" },
+        "category": { "type": "string" },
+        "priority": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "title", "caseNumber", "status"]
+    },
+    "AlertNotification": {
+      "title": "AlertNotification",
+      "description": "Community security or fire alert",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "severity": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "title", "type", "severity"]
+    },
+    "BoloRecord": {
+      "title": "BoloRecord",
+      "description": "Be On the Lookout bulletin",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "title", "type", "status"]
+    },
+    "PersonOfInterest": {
+      "title": "PersonOfInterest",
+      "description": "Intelligence dossier for person of interest",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "threatLevel": { "type": "string" }
+      },
+      "required": ["id", "fullName"]
+    },
+    "VehicleOfInterest": {
+      "title": "VehicleOfInterest",
+      "description": "Intelligence vehicle record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "licensePlate": { "type": "string" },
+        "threatLevel": { "type": "string" }
+      },
+      "required": ["id", "licensePlate"]
+    },
+    "IntelObservation": {
+      "title": "IntelObservation",
+      "description": "Tactical field intel observation",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "title", "timestamp"]
+    },
+    "ActivePatrolUnit": {
+      "title": "ActivePatrolUnit",
+      "description": "Active responder unit location and status",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "callsign": { "type": "string" },
+        "status": { "type": "string" },
+        "lastUpdate": { "type": "string" }
+      },
+      "required": ["id", "callsign", "status"]
+    },
+    "IncidentNotification": {
+      "title": "IncidentNotification",
+      "description": "Control room real-time incident alert banner",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "title", "timestamp"]
+    },
+    "AuditLogEntry": {
+      "title": "AuditLogEntry",
+      "description": "Tamper-evident audit log entry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "action": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "action", "timestamp"]
+    },
+    "LocationArea": {
+      "title": "LocationArea",
+      "description": "Operational sector geofence area",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "SystemSettings": {
+      "title": "SystemSettings",
+      "description": "Global application configuration",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "communityName": { "type": "string" }
+      },
+      "required": ["id"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User and responder profiles"
+    },
+    "/emergencies/{emergencyId}": {
+      "schema": "EmergencyEvent",
+      "description": "Emergency SOS events"
+    },
+    "/situation_reports/{reportId}": {
+      "schema": "SituationReport",
+      "description": "Situation reports and voorvalleboek log"
+    },
+    "/cases/{caseId}": {
+      "schema": "Case",
+      "description": "Investigation cases"
+    },
+    "/alerts/{alertId}": {
+      "schema": "AlertNotification",
+      "description": "Broadcast alerts"
+    },
+    "/bolos/{boloId}": {
+      "schema": "BoloRecord",
+      "description": "BOLO bulletins"
+    },
+    "/intel_pois/{poiId}": {
+      "schema": "PersonOfInterest",
+      "description": "Persons of interest"
+    },
+    "/intel_vois/{voiId}": {
+      "schema": "VehicleOfInterest",
+      "description": "Vehicles of interest"
+    },
+    "/intel_observations/{obsId}": {
+      "schema": "IntelObservation",
+      "description": "Intel observations"
+    },
+    "/active_patrol_units/{unitId}": {
+      "schema": "ActivePatrolUnit",
+      "description": "Live patrol locations"
+    },
+    "/incident_notifications/{notifId}": {
+      "schema": "IncidentNotification",
+      "description": "Incident notifications"
+    },
+    "/audit_logs/{logId}": {
+      "schema": "AuditLogEntry",
+      "description": "Audit trails"
+    },
+    "/location_areas/{areaId}": {
+      "schema": "LocationArea",
+      "description": "Location sectors"
+    },
+    "/settings/{settingId}": {
+      "schema": "SystemSettings",
+      "description": "System settings"
+    }
+  }
+}

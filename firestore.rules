@@ -1,0 +1,114 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // Community and farm emergency operations
+    // Users Collection: Profiles, Registrations, Emergency details
+    match /users/{userId} {
+      allow read, write: if true;
+    }
+
+    // Emergencies: Live SOS panic alarms, audio streams, location tracking and CAD dispatch
+    match /emergencies/{emergencyId} {
+      allow read, write: if true;
+    }
+
+    // Situation Reports & Data Logs (Voorvalleboek)
+    match /situation_reports/{reportId} {
+      allow read, write: if true;
+    }
+
+    // Active Patrol Units
+    match /active_patrol_units/{unitId} {
+      allow read, write: if true;
+    }
+
+    // Real-time Incident Notifications
+    match /incident_notifications/{notifId} {
+      allow read, write: if true;
+    }
+
+    // Geographic Location Areas
+    match /location_areas/{areaId} {
+      allow read, write: if true;
+    }
+
+    // Incident Cases & Evidence
+    match /cases/{caseId} {
+      allow read, write: if true;
+    }
+
+    // Community & Fire Alerts
+    match /alerts/{alertId} {
+      allow read, write: if true;
+    }
+
+    // Intelligence & BOLOs
+    match /intel_pois/{poiId} {
+      allow read, write: if true;
+    }
+
+    match /intel_vois/{voiId} {
+      allow read, write: if true;
+    }
+
+    match /intel_observations/{obsId} {
+      allow read, write: if true;
+    }
+
+    match /intel_reviews/{reviewId} {
+      allow read, write: if true;
+    }
+
+    match /bolos/{boloId} {
+      allow read, write: if true;
+    }
+
+    // Audit Logs
+    match /audit_logs/{logId} {
+      allow read, write: if true;
+    }
+
+    // Privacy Logs
+    match /privacy_logs/{logId} {
+      allow read, write: if true;
+    }
+
+    // Backups & Disaster Recovery
+    match /backups/{backupId} {
+      allow read, write: if true;
+    }
+
+    // System Telemetry & Errors
+    match /system_health/{probeId} {
+      allow read, write: if true;
+    }
+
+    match /system_errors/{errorId} {
+      allow read, write: if true;
+    }
+
+    // Settings, Groups & Contacts
+    match /settings/{settingId} {
+      allow read, write: if true;
+    }
+
+    match /groups/{groupId} {
+      allow read, write: if true;
+    }
+
+    match /contacts/{contactId} {
+      allow read, write: if true;
+    }
+
+    match /camera_inventory/{camId} {
+      allow read, write: if true;
+    }
+  }
+}
+
